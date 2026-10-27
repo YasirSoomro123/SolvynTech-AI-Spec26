@@ -1,0 +1,12 @@
+# Pixel-window theme, sampled from the reference picture.
+# Streamlit reads this automatically when you run `streamlit run app.py` from this folder.
+[theme]
+base = "light"
+primaryColor = "#4F928C"              # deep teal  - focus rings, toggles, selected items
+backgroundColor = "#F7E3CB"           # cream      - the window surface
+secondaryBackgroundColor = "#FFF6EA"  # light cream - inputs, tables, expanders
+textColor = "#442C2C"                 # ink brown
+font = "sans serif"
+
+[browser]
+gatherUsageStats = false

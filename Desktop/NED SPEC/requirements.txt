@@ -1,0 +1,19 @@
+# Core: everything the extraction needs. No GPU, no model weights, no pip source builds.
+openpyxl>=3.1          # .xlsx cells, merged ranges, multiple sheets
+pymupdf>=1.24          # PDF text layer with coordinates (fitz); pdf_reader falls back to pdfplumber
+streamlit>=1.30        # app.py
+pandas>=2.0            # the cross-check table in the UI
+requests>=2.31         # the LLM call is plain HTTP, so any provider can be swapped in .env
+
+# .env support (llm_client reads it if present; the app runs without it)
+python-dotenv>=1.0
+
+# Tests
+pytest>=8.0
+
+# Optional - only needed for files the core cannot read. The app degrades to a warning
+# instead of crashing if these are missing, and the tests skip the paths that need them.
+#   pdfplumber>=0.11      second opinion on a PDF text layer
+#   pytesseract>=0.3      OCR for scanned drawings (also needs the tesseract binary)
+#   Pillow>=10            image handling for that OCR path
+#   xlrd>=2.0             legacy .xls workbooks

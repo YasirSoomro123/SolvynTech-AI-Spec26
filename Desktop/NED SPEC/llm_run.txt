@@ -1,0 +1,101 @@
+[llm] groq:qwen/qwen3.8-27b
+==============================================================================
+PART 3004   data folder: data\demo
+==============================================================================
+
+SOURCES
+-------
+  Excel data\demo\records\PROD_3004_3005.xlsx   <- '3004' as a word in the filename
+  PDF   data\demo\3004  rev C.pdf   <- '3004' as a word in the filename; looks like a revisioned/final file
+  IGES  data\demo\3004  rev C.igs   <- '3004' as a word in the filename; looks like a revisioned/final file
+  Excel PROD_3004_3005.xlsx: 2 sheet(s), 1 table(s), 28 fact(s)
+  PDF 3004  rev C.pdf: 28 fact(s) from 1 page(s) via pymupdf, 531 text char(s), 0 numeric token(s) rejected
+  IGES 3004  rev C.igs: 6 entities, 23 facts, units MM (x1.0 mm)
+
+FACT SHEET
+----------
+--- Excel (14 facts) ---
+part_number = 3004 (confidence: code-high) [Excel: PROD_3004_3005.xlsx, 'PROD'!A2] | note: column 'P/N' | part=3004
+part_name = Flanged bushing 20x8 (confidence: code-high) [Excel: PROD_3004_3005.xlsx, 'PROD'!B2] | note: column 'DESC' | part=3004
+material = Brass CuZn39Pb3 (confidence: code-high) [Excel: PROD_3004_3005.xlsx, 'PROD'!C2] | note: column 'MAT' | part=3004
+outer_diameter = 20 mm (confidence: code-high) [Excel: PROD_3004_3005.xlsx, 'PROD'!D2] | note: read '20' as 20.0 mm -> 20.0 mm | column 'DIA_OUT' | part=3004
+inner_diameter = 12 mm (confidence: code-high) [Excel: PROD_3004_3005.xlsx, 'PROD'!E2] | note: read '12' as 12.0 mm -> 12.0 mm | column 'DIA_IN' | part=3004
+length = 8 mm (confidence: code-high) [Excel: PROD_3004_3005.xlsx, 'PROD'!F2] | note: read '8' as 8.0 mm -> 8.0 mm | column 'L' | part=3004
+quantity = 250 (confidence: code-high) [Excel: PROD_3004_3005.xlsx, 'PROD'!G2] | note: column 'QTY' | part=3004
+machine = Milling centre Haas VF2 (confidence: code-high) [Excel: PROD_3004_3005.xlsx, 'PROD'!H2] | note: column 'CNC' | part=3004
+operations = Face, Drill, Bore, Chamfer (confidence: code-high) [Excel: PROD_3004_3005.xlsx, 'PROD'!I2] | note: split from 'Face / Drill / Bore / Chamfer' | column 'ROUTINE' | part=3004
+general_tolerance = ISO 2768-k (confidence: code-high) [Excel: PROD_3004_3005.xlsx, 'PROD'!K2] | note: column 'GT' | part=3004
+surface_finish = 3.2 um (confidence: code-high) [Excel: PROD_3004_3005.xlsx, 'PROD'!L2] | note: Ra value | column 'FIN' | part=3004
+supplier_ref = FB-20-08 (confidence: code-high) [Excel: PROD_3004_3005.xlsx, 'PROD'!M2] | note: column 'VENDOR' | part=3004
+revision = C (confidence: code-high) [Excel: PROD_3004_3005.xlsx, 'PROD'!N2] | note: column 'REV' | part=3004
+remarks = OD on the drawing is 22 mm - the record value is unverified (confidence: code-high) [Excel: PROD_3004_3005.xlsx, 'PROD'!O2] | note: column 'NOTE' | part=3004
+--- PDF (28 facts) ---
+part_name = Flanged bushing 20x8 (confidence: code-high) [PDF: 3004  rev C.pdf, page 1, title block] | note: title block label 'PART NAME'
+part_number = 3004 (confidence: code-high) [PDF: 3004  rev C.pdf, page 1, title block] | note: title block label 'PART NUMBER'
+material = Brass CuZn39Pb3 (confidence: code-high) [PDF: 3004  rev C.pdf, page 1, title block] | note: title block label 'MATERIAL'
+scale = 2:1 (confidence: code-high) [PDF: 3004  rev C.pdf, page 1, title block] | note: title block label 'SCALE'
+units = mm (confidence: code-high) [PDF: 3004  rev C.pdf, page 1, title block] | note: title block label 'UNITS'
+revision = C (confidence: code-high) [PDF: 3004  rev C.pdf, page 1, title block] | note: title block label 'REVISION'
+drawn_by = SPEC26 SYNTH (confidence: code-high) [PDF: 3004  rev C.pdf, page 1, title block] | note: title block label 'DRAWN BY'
+supplier_ref = FB-20-08 (confidence: code-high) [PDF: 3004  rev C.pdf, page 1, title block] | note: title block label 'SUPPLIER REF'
+drawing_no = 3004-DWG (confidence: code-high) [PDF: 3004  rev C.pdf, page 1, title block] | note: title block label 'DRAWING NO'
+diameter = 22 mm (confidence: code-high) [PDF: 3004  rev C.pdf, page 1, dimension callout] | note: per drawing units (mm)
+dimension = 8 mm (confidence: code-high) [PDF: 3004  rev C.pdf, page 1, dimension callout] | note: per drawing units (mm); tolerance +/-0.1 as drawn
+tolerance = +/-0.1 (confidence: code-high) [PDF: 3004  rev C.pdf, page 1, dimension callout] | note: drawn tolerance on dimension 8.0 mm
+diameter = 21.95 mm (confidence: code-high) [PDF: 3004  rev C.pdf, page 1, dimension callout] | note: per drawing units (mm); tolerance +0/-0.05 as drawn
+tolerance = +0/-0.05 (confidence: code-high) [PDF: 3004  rev C.pdf, page 1, dimension callout] | note: drawn tolerance on diameter 21.95 mm
+inner_diameter = 12 mm (confidence: code-high) [PDF: 3004  rev C.pdf, page 1, dimension callout] | note: bore/hole size written without a diameter symbol; per drawing units (mm)
+depth = 1.5 mm (confidence: code-high) [PDF: 3004  rev C.pdf, page 1, dimension callout] | note: feature depth as drawn; per drawing units (mm)
+thread = M8 (confidence: code-high) [PDF: 3004  rev C.pdf, page 1, dimension callout] | note: metric ISO thread designation
+surface_finish = 3.2 um (confidence: code-high) [PDF: 3004  rev C.pdf, page 1, dimension callout] | note: surface roughness Ra 3.2, Ra value in micrometres
+material = BRASS CUZN39PB3 (confidence: code-high) [PDF: 3004  rev C.pdf, page 1, general note] | note: note label 'MATERIAL'
+material_standard = EN 12164 (confidence: code-high) [PDF: 3004  rev C.pdf, page 1, general note] | note: note label 'MATERIAL STANDARD'
+units = mm (confidence: code-high) [PDF: 3004  rev C.pdf, page 1, general note] | note: declared dimension units: ALL DIMENSIONS IN MILLIMETERS (mm)
+general_tolerance = ISO 2768-k (confidence: code-high) [PDF: 3004  rev C.pdf, page 1, general note] | note: general tolerance standard as written; the digits belong to the standard, not to a dimension
+outer_diameter = 22 mm (confidence: code-high) [PDF: 3004  rev C.pdf, page 1, general note] | note: per drawing units (mm); tolerance +0/-0.05 as drawn
+tolerance = +0/-0.05 (confidence: code-high) [PDF: 3004  rev C.pdf, page 1, general note] | note: drawn tolerance on outer_diameter 22.0 mm
+length = 8 mm (confidence: code-high) [PDF: 3004  rev C.pdf, page 1, general note] | note: labelled 'LENGTH' on the drawing; per drawing units (mm); tolerance ±0.1 as drawn
+tolerance = ±0.1 (confidence: code-high) [PDF: 3004  rev C.pdf, page 1, general note] | note: drawn tolerance on length 8.0 mm
+surface_finish = 3.2 um (confidence: code-high) [PDF: 3004  rev C.pdf, page 1, general note] | note: surface roughness Ra 3.2 um, Ra value in micrometres
+general_note = DEBURR ALL EDGES (confidence: code-high) [PDF: 3004  rev C.pdf, page 1, general note] | note: general note transcribed verbatim (item 7)
+--- IGES (23 facts) ---
+cad_units = MM (confidence: code-high) [IGES: 3004  rev C.igs, Global section] | note: declared in Global section; 1 model unit = 1.0 mm
+model_file_name = 3004 (confidence: code-high) [IGES: 3004  rev C.igs, Global section] | note: the exporter's own file name - often NOT the part number
+cad_system = SyntheticCAD (confidence: code-high) [IGES: 3004  rev C.igs, Global section]
+cad_postprocessor = make_test_data.py (confidence: code-high) [IGES: 3004  rev C.igs, Global section]
+model_date = 2026-10-26 (confidence: code-high) [IGES: 3004  rev C.igs, Global section] | note: raw timestamp 20261026.120000
+model_tolerance = 1e-07 mm (confidence: code-high) [IGES: 3004  rev C.igs, Global section] | note: CAD surface-fit tolerance, NOT a manufacturing tolerance - do not compare it with drawing tolerances
+model_author = Synthetic Author (confidence: code-high) [IGES: 3004  rev C.igs, Global section]
+model_author_company = Synthetic CAD Corp. (confidence: code-high) [IGES: 3004  rev C.igs, Global section]
+iges_entity_total = 6 (confidence: code-high) [IGES: 3004  rev C.igs, Directory section]
+iges_entity_count = 2 (confidence: code-high) [IGES: 3004  rev C.igs, Directory section] | note: type 100 = Circle
+iges_entity_count = 2 (confidence: code-high) [IGES: 3004  rev C.igs, Directory section] | note: type 126 = Plane
+iges_entity_count = 2 (confidence: code-high) [IGES: 3004  rev C.igs, Directory section] | note: type 502 = Right circular cylinder
+cylinder_radius = 10 mm (confidence: code-high) [IGES: 3004  rev C.igs, IGES entity #1 (type 502)] | note: radius read from a right circular cylinder entity
+outer_diameter = 20 mm (confidence: code-medium) [IGES: 3004  rev C.igs, IGES entity #1 (type 502)] | note: derived from one cylinder entity; the model may contain several
+cylinder_radius = 6 mm (confidence: code-high) [IGES: 3004  rev C.igs, IGES entity #2 (type 502)] | note: radius read from a right circular cylinder entity
+outer_diameter = 12 mm (confidence: code-medium) [IGES: 3004  rev C.igs, IGES entity #2 (type 502)] | note: derived from one cylinder entity; the model may contain several
+hole_diameter = 12 mm (confidence: code-medium) [IGES: 3004  rev C.igs, IGES entity #5 (type 100)] | note: diameter of a circular edge - could be a hole or an outer face
+hole_diameter = 12 mm (confidence: code-medium) [IGES: 3004  rev C.igs, IGES entity #6 (type 100)] | note: diameter of a circular edge - could be a hole or an outer face
+iges_entities_decoded = 4 (confidence: code-high) [IGES: 3004  rev C.igs, Directory/Parameter sections] | note: of 6 geometric entities, 2 did not validate
+bounding_box_min = -10, -10, 0 mm (confidence: code-medium) [IGES: 3004  rev C.igs, validated entity coordinates] | note: corner of the envelope of every point we could validate
+bounding_box_size = 8, 20, 20 mm (confidence: code-medium) [IGES: 3004  rev C.igs, validated entity coordinates] | note: SORTED envelope sizes in mm (largest last); axis order is exporter-dependent so the three numbers are compared sorted, never as X/Y/Z. Includes B-spline control points where validated, so it can only be too big, never too small
+hole_candidates = 4 (confidence: inferred) [IGES: 3004  rev C.igs, Directory section] | note: 2 cylinder + 2 circle entities; many are outer surfaces, not holes
+cylinder_height = 8 mm (confidence: code-high) [IGES: 3004  rev C.igs, IGES entity 502] | note: axial extent of the tallest cylinder
+
+CROSS-CHECK (Excel vs PDF vs IGES)
+------------------------------
+Traceback (most recent call last):
+  File "C:\Users\HP\Documents\Qoder\2026-10-27\42b00826\SPEC 26\main.py", line 120, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "C:\Users\HP\Documents\Qoder\2026-10-27\42b00826\SPEC 26\main.py", line 115, in main
+    print_human(rep, answers, args.quiet)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Documents\Qoder\2026-10-27\42b00826\SPEC 26\main.py", line 60, in print_human
+    print(rep.table())
+    ~~~~~^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python314\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 0-1: character maps to <undefined>

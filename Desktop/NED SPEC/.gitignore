@@ -1,0 +1,27 @@
+# secrets - this project must run with no key at all, and a key must never be committed
+.env
+.env.local
+*.key
+.streamlit/secrets.toml
+
+# python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+
+# office lock / autosave leftovers (they reappear whenever a file is open)
+~$*
+
+# local scratch
+*.log
+tmp/
+
+# .env.example is a deliverable and stays tracked on purpose.
+# data/ ships only a README: the organizers gave no sample files, and whatever a user adds
+# through the app lands in data/uploads/, which is not part of the submission.
+data/*
+!data/README.md
+!data/.gitkeep
